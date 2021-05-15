@@ -7,3 +7,13 @@ AddEventHandler('mrp:spawn', function(characterToUse, spawnIdx)
 		})
 	end
 end)
+
+RegisterNetEvent('mrp:updateCharacter')
+AddEventHandler('mrp:updateCharacter', function(character)
+	if  character ~= nil then
+		SendNUIMessage({
+			type = 'update',
+			stats = character.stats
+		})
+	end
+end)
