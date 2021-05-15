@@ -1,0 +1,18 @@
+@font-face {
+  font-family: gobold-regular;
+  src: url(../fonts/gobold-regular.otf);
+}
+
+body {
+	font-family: gobold-regular;
+	overflow: hidden;
+    /*height:1080px;*/
+	height:100%;
+    width:100%;
+	font-size: 16px;
+}
+
+.main_container .text_description {
+	width: 60px;
+    display: inline-block;
+}
