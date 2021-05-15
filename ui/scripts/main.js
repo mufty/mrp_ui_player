@@ -4,11 +4,22 @@ $(document).ready(function() {
         $(selector + ' .progress_text').text(value);
     }
     
+    if(!config.healthText)
+        $('#health .progress_text').hide();
+    if(!config.armorText)
+        $('#armor .progress_text').hide();
+    if(!config.thirstText)
+        $('#thirst .progress_text').hide();
+    if(!config.hungerText)
+        $('#hunger .progress_text').hide();
+    
     window.addEventListener('message', function(event) {
         var data = event.data;
 		if(data.type == "spawn" || data.type == "update"){
             updateProgressBar('#health .progress', data.stats.health);
             updateProgressBar('#armor .progress', data.stats.armor);
+            updateProgressBar('#hunger .progress', data.stats.hunger);
+            updateProgressBar('#thirst .progress', data.stats.thirst);
             $('#cash').text(data.stats.cash);
             $('#bank').text(data.stats.bank);
 		}

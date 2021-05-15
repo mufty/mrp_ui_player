@@ -38,7 +38,15 @@ body {
 }
 
 .main_container #armor .progress {
+    background-color: #00B2D6;
+}
+
+.main_container #thirst .progress {
     background-color: #58C6DC;
+}
+
+.main_container #hunger .progress {
+    background-color: #FFA100;
 }
 
 .bottom_container {
