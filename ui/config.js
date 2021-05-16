@@ -1,6 +1,7 @@
 config = {
-	healthText: false,
-	armorText: false,
-	thirstText: false,
-	hungerText: false
+    healthText: false,
+    armorText: false,
+    thirstText: false,
+    hungerText: false,
+    stressText: false
 };

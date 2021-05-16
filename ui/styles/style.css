@@ -1,13 +1,13 @@
 @font-face {
-  font-family: gobold-regular;
-  src: url(../fonts/gobold-regular.otf);
+    font-family: gobold-regular;
+    src: url(../fonts/gobold-regular.otf);
 }
 
 body {
     font-family: gobold-regular;
     overflow: hidden;
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
     font-size: 16px;
 }
 
@@ -47,6 +47,10 @@ body {
 
 .main_container #hunger .progress {
     background-color: #FFA100;
+}
+
+.main_container #stress .progress {
+    background-color: #9A41A4;
 }
 
 .bottom_container {
