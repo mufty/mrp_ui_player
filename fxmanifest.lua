@@ -8,7 +8,7 @@ version '0.0.1'
 ui_page 'ui/index.html'
 
 dependencies {
-  "mrp_core"
+    "mrp_core"
 }
 
 files {
@@ -17,14 +17,14 @@ files {
     'ui/scripts/main.js',
     'ui/lib/jquery-3.6.0.min.js',
     'ui/styles/style.css',
-	'ui/index.html',
+    'ui/index.html',
     'client.lua',
 }
 
 client_scripts {
-	'client.lua',
+    'client.lua',
 }
 
 server_scripts {
-	'server.js',
+    'server.js',
 }
