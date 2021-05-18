@@ -15,7 +15,6 @@ files {
     'ui/fonts/gobold-regular.otf',
     'ui/config.js',
     'ui/scripts/main.js',
-    'ui/lib/jquery-3.6.0.min.js',
     'ui/styles/style.css',
     'ui/index.html',
     'client.lua',
