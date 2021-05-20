@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    if (!config.startVisible)
+        $('.main_container').hide();
+
     function updateProgressBar(selector, value) {
         $(selector).css("width", value + "%");
         $(selector + ' .progress_text').text(value);
@@ -17,14 +20,21 @@ $(document).ready(function() {
 
     window.addEventListener('message', function(event) {
         var data = event.data;
-        if (data.type == "spawn" || data.type == "update") {
-            updateProgressBar('#health .progress', data.stats.health);
-            updateProgressBar('#armor .progress', data.stats.armor);
-            updateProgressBar('#hunger .progress', data.stats.hunger);
-            updateProgressBar('#thirst .progress', data.stats.thirst);
-            updateProgressBar('#stress .progress', data.stats.stress);
-            $('#cash').text(data.stats.cash);
-            $('#bank').text(data.stats.bank);
+        switch (data.type) {
+            case "spawn":
+            case "update":
+                updateProgressBar('#health .progress', data.stats.health);
+                updateProgressBar('#armor .progress', data.stats.armor);
+                updateProgressBar('#hunger .progress', data.stats.hunger);
+                updateProgressBar('#thirst .progress', data.stats.thirst);
+                updateProgressBar('#stress .progress', data.stats.stress);
+                $('#cash').text(data.stats.cash);
+                $('#bank').text(data.stats.bank);
+                break;
+            case "show":
+                $('.main_container').show();
+            default:
+                break;
         }
     })
 })

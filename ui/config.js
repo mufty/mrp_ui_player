@@ -3,5 +3,6 @@ config = {
     armorText: false,
     thirstText: false,
     hungerText: false,
-    stressText: false
+    stressText: false,
+    startVisible: false
 };

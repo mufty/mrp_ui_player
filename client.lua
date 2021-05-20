@@ -23,10 +23,16 @@ end)
 
 RegisterNetEvent('mrp:updateCharacter')
 AddEventHandler('mrp:updateCharacter', function(character)
-if character ~= nil then
-SendNUIMessage({
-    type = 'update',
-    stats = character.stats
-})
-end
+    if character ~= nil then
+        SendNUIMessage({
+            type = 'update',
+            stats = character.stats
+        })
+    end
+end)
+
+AddEventHandler('playerSpawned', function(spawnPoint)
+    SendNUIMessage({
+        type = 'show'
+    })
 end)
