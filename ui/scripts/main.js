@@ -28,8 +28,6 @@ $(document).ready(function() {
                 updateProgressBar('#hunger .progress', data.stats.hunger);
                 updateProgressBar('#thirst .progress', data.stats.thirst);
                 updateProgressBar('#stress .progress', data.stats.stress);
-                $('#cash').text(data.stats.cash);
-                $('#bank').text(data.stats.bank);
                 break;
             case "show":
                 $('.main_container').show();
