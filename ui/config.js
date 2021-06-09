@@ -4,5 +4,6 @@ config = {
     thirstText: false,
     hungerText: false,
     stressText: false,
-    startVisible: false
+    startVisible: false,
+    flashCashTime: 10000
 };

@@ -13,6 +13,7 @@ dependencies {
 
 files {
     'ui/fonts/gobold-regular.otf',
+    'ui/fonts/coolvetica_rg.ttf',
     'ui/config.js',
     'ui/scripts/main.js',
     'ui/styles/style.css',

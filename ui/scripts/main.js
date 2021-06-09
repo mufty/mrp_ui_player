@@ -7,6 +7,23 @@ $(document).ready(function() {
         $(selector + ' .progress_text').text(value);
     }
 
+    function numberWithSpaces(x) {
+        var parts = x.toString().split(".");
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        return parts.join(".");
+    }
+
+    let lastcash = 0;
+
+    function flashCash() {
+        $('div.cash').show();
+        setTimeout(() => {
+            $('div.cash').hide();
+        }, config.flashCashTime);
+    }
+
+    $('div.cash').hide();
+
     if (!config.healthText)
         $('#health .progress_text').hide();
     if (!config.armorText)
@@ -28,9 +45,14 @@ $(document).ready(function() {
                 updateProgressBar('#hunger .progress', data.stats.hunger);
                 updateProgressBar('#thirst .progress', data.stats.thirst);
                 updateProgressBar('#stress .progress', data.stats.stress);
-                $('#cash').text(data.stats.cash);
+                if (lastcash != data.stats.cash) {
+                    flashCash();
+                }
+                lastcash = data.stats.cash;
+                $('#cash').text(numberWithSpaces(data.stats.cash));
                 break;
             case "show":
+                flashCash();
                 $('.main_container').show();
             default:
                 break;
