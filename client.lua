@@ -36,3 +36,9 @@ AddEventHandler('playerSpawned', function(spawnPoint)
         type = 'show'
     })
 end)
+
+RegisterCommand('cash', function (source, args)
+    SendNUIMessage({
+        type = 'cash'
+    })
+end);

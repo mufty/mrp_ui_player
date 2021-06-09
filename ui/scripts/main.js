@@ -54,6 +54,10 @@ $(document).ready(function() {
             case "show":
                 flashCash();
                 $('.main_container').show();
+                break
+            case "cash":
+                flashCash();
+                break
             default:
                 break;
         }
